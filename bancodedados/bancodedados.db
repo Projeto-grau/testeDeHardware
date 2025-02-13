@@ -1,3 +1,7 @@
+     CREATE DATABASE Teste_De_Hardware;
+
+     USE DATABASE Teste_De_Hardware;
+
 CREATE TABLE usuario(
      cod_paciente INT NOT NULL AUTO_INCREMENT,
      login VARCHAR (100) NOT NULL,
