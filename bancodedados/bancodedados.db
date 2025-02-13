@@ -1,0 +1,67 @@
+CREATE TABLE usuario(
+     cod_paciente INT NOT NULL AUTO_INCREMENT,
+     login VARCHAR (100) NOT NULL,
+     senha VARCHAR (30) NOT NULL,
+     PRIMARY KEY (cod_usuario)
+);
+
+
+CREATE TABLE hardware(
+     cod_hardware INT NOT NULL AUTO_INCREMENT,
+     processador VARCHAR(100) NOT NULL,
+     placaDeVideo VARCHAR (100) NOT NULL,
+     memoriaRam VARCHAR (100) NOT NULL,
+     PRIMARY KEY (cod_hardware)
+     );
+
+CREATE TABLE teste(
+     cod_teste INT NOT NULL AUTO_INCREMENT,
+     tipoDeTeste VARCHAR(100) NOT NULL,
+     duracaoDeTeste DATETIME,
+     temperatura DECIMAL (5,2),
+     PRIMARY KEY (cod_teste)
+     );
+
+CREATE TABLE jogo(
+     cod_jogo INT NOT NULL AUTO_INCREMENT,
+     nome VARCHAR (100) NOT NULL,
+     requisitos VARCHAR (80) NOT NULL,
+     PRIMARY KEY (cod_jogo)
+     );
+
+CREATE TABLE atualizacao(
+     cod_atualizacao INT NOT NULL AUTO_INCREMENT,
+     jogosNovos VARCHAR (100),
+     pecasNovas VARCHAR (80),
+     PRIMARY KEY (cod_atualizacao)
+     );
+
+
+CREATE TABLE resultado(
+     cod_resultado INT NOT NULL AUTO_INCREMENT,
+     jogos VARCHAR (100) NOT NULL,
+     presetGrafico VARCHAR (100) NOT NULL,
+     fps DECIMAL (6,2) NOT NULL,
+     PRIMARY KEY (cod_resultado)
+     );
+
+CREATE TABLE historico(
+     cod_historico INT NOT NULL AUTO_INCREMENT,
+     testeAntigos VARCHAR (100),
+     PRIMARY KEY (cod_historico)
+     );
+
+
+CREATE TABLE recomendacao(
+     cod_recomendacao INT NOT NULL AUTO_INCREMENT,
+     recomendacaoDePecas VARCHAR (100) NOT NULL,
+     compatibilidade VARCHAR (50),
+     PRIMARY KEY (cod_recomendacao)
+     );
+
+CREATE TABLE comparacao(
+     cod_comparacao INT NOT NULL AUTO_INCREMENT,
+     testeAntigo VARCHAR (100),
+     testeAtual VARCHAR (100) NOT NULL,
+     PRIMARY KEY (cod_comparacao)
+     );
